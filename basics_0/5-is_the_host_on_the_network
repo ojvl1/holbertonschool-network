@@ -8,3 +8,9 @@ fi
 ip_address=$1
 
 ping -c 5 $ip_address
+
+if [ $? -eq 0 ]; then
+    echo "The host at $ip_address is reachable."
+else
+    echo "The host at $ip_address is not reachable."
+fi
